@@ -5,7 +5,15 @@
                 div {
                     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
                 }
-
+                
+                .outer-container {
+                    display: flex;
+                    background-image: linear-gradient(to right,  rgb(58, 58, 58),rgb(10, 10, 10));
+                    padding: 30px 30px 30px 30px;
+                    border: 2px solid rgb(241, 229, 119);
+                    border-radius:5px;
+                }
+                
                 .main {
                     display: flex;
                     background-image: linear-gradient(to right,  rgb(58, 58, 58),rgb(10, 10, 10));
@@ -33,7 +41,7 @@
 
                 .song {
                     font-size: 24px;
-                    color: #666;
+                    color: white;
                     text-align: center;
                     margin-top: 3px;
                     white-space:nowrap;
@@ -86,18 +94,19 @@
 
                 {{barCSS|safe}}
             </style>
-            
-            <div class="main">
-                <a class="art" href="{}" target="_BLANK">
-                    <center>
-                        <img src="data:image/png;base64, {{image}}" class="cover" />
-                    </center>
-                </a>
+            <div class="outer-container">
+                <div class="main">
+                    <a class="art" href="{}" target="_BLANK">
+                        <center>
+                            <img src="data:image/png;base64, {{image}}" class="cover" />
+                        </center>
+                    </a>
 
-                <div class="content">
-                    <div class="song">{{songName}}</div>
-                    <div class="artist">{{artistName}}</div>
-                    <div id="bars">{{contentBar|safe}}</div>
+                    <div class="content">
+                        <div class="song">{{songName}}</div>
+                        <div class="artist">{{artistName}}</div>
+                        <div id="bars">{{contentBar|safe}}</div>
+                    </div>
                 </div>
             </div>
 
